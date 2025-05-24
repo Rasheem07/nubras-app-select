@@ -14,14 +14,14 @@ import {
 } from "lucide-react";
 
 const MODULES = [
-  { name: "Docs", sub: "an-sitedocs", Icon: FileText },
   { name: "Finance", sub: "finance", Icon: DollarSign },
   { name: "POS", sub: "pos", Icon: ShoppingCart },
   { name: "CRM", sub: "crm", Icon: Users },
-  { name: "System", sub: "system", Icon: Settings },
   { name: "Inventory", sub: "inventory", Icon: Box },
   { name: "HR", sub: "hr", Icon: UserCheck },
   { name: "Manufacturing", sub: "manufacturing", Icon: HardHat },
+  { name: "System", sub: "system", Icon: Settings },
+  { name: "Docs", sub: "an-sitedocs", Icon: FileText },
 ];
 
 const Home: NextPage = () => (
