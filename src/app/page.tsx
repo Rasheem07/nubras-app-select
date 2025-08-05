@@ -87,8 +87,8 @@ const ERPAppsPage = () => {
       {/* Header */}
       <div className="bg-white/80 backdrop-blur-md border-b border-gray-200/50 sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-8 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div>
+          <div className="flex flex-col gap-2 md:flex-row items-center justify-between">
+            <div className='flex flex-col items-center md:items-start'> 
               <h1 className="text-3xl font-light text-gray-900 tracking-tight">Apps</h1>
               <p className="text-sm text-gray-500 mt-1 font-medium">Choose an application to continue</p>
             </div>
