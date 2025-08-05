@@ -87,7 +87,7 @@ const ERPAppsPage = () => {
       {/* Header */}
       <div className="bg-white/80 backdrop-blur-md border-b border-gray-200/50 sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-8 py-6">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-between">
             <div>
               <h1 className="text-3xl font-light text-gray-900 tracking-tight">Apps</h1>
               <p className="text-sm text-gray-500 mt-1 font-medium">Choose an application to continue</p>
@@ -198,15 +198,15 @@ const ERPAppsPage = () => {
 
       {/* Bottom Section */}
       <div className="mt-20 border-t border-gray-200/50 bg-white/40 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-8 py-8">
-          <div className="flex items-center justify-center text-xs text-gray-400 space-x-8">
-            <span>© 2024 Enterprise Resource Planning</span>
-            <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
-            <a href="#" className="hover:text-gray-600 transition-colors duration-200">Help Center</a>
-            <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
-            <a href="#" className="hover:text-gray-600 transition-colors duration-200">Documentation</a>
-            <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
-            <a href="#" className="hover:text-gray-600 transition-colors duration-200">Community</a>
+        <div className="max-w-6xl mx-auto px-4 sm:px-8 py-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center text-xs text-gray-400 space-y-3 sm:space-y-0 sm:space-x-8">
+        <span>© 2024 Enterprise Resource Planning</span>
+        <div className="hidden sm:block w-1 h-1 bg-gray-300 rounded-full"></div>
+        <a href="#" className="hover:text-gray-600 transition-colors duration-200">Help Center</a>
+        <div className="hidden sm:block w-1 h-1 bg-gray-300 rounded-full"></div>
+        <a href="#" className="hover:text-gray-600 transition-colors duration-200">Documentation</a>
+        <div className="hidden sm:block w-1 h-1 bg-gray-300 rounded-full"></div>
+        <a href="#" className="hover:text-gray-600 transition-colors duration-200">Community</a>
           </div>
         </div>
       </div>
