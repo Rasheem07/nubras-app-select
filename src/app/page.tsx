@@ -66,7 +66,7 @@ const apps = [
   { id: 27, name: "Documents", icon: FileText, description: 'Centralized document management', color: 'from-teal-400 to-teal-600' },
   
   // Administration
-  { id: 20, name: "SystemAdministration", icon: Shield, description: 'Manage all system configurations and access', color: 'from-slate-400 to-slate-600' },
+  { id: 20, name: "System Administration", icon: Shield, description: 'Manage all system configurations and access', color: 'from-slate-400 to-slate-600' },
 ];
   // Filter apps based on search term
   const filteredApps = searchTerm.trim() === '' 
