@@ -29,42 +29,45 @@ const ERPAppsPage = () => {
   const [hoveredApp, setHoveredApp] = useState<number | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
 
-  const apps = [
-    { id: 1, name: 'Sales', icon: ShoppingCart, description: 'Manage sales pipeline and opportunities', color: 'from-emerald-400 to-emerald-600' },
-    {id: 32, name: "Point of Sales", icon: ShoppingCart, description: 'Point of Sale system for retail', color: 'from-rose-400 to-rose-600' },
-    { id: 2, name: 'CRM', icon: Building2, description: 'Customer relationship management', color: 'from-blue-400 to-blue-600' },
-    { id: 3, name: 'Inventory', icon: Package, description: 'Stock and warehouse management', color: 'from-orange-400 to-orange-600' },
-    { id: 21, name: "Procurement", icon: Truck, description: 'Supplier and purchase order management', color: 'from-teal-400 to-teal-600' },
-    { id: 4, name: 'Accounting', icon: DollarSign, description: 'Financial management and reporting', color: 'from-green-400 to-green-600' },
-    { id: 5, name: 'Invoicing', icon: FileText, description: 'Billing and invoice management', color: 'from-purple-400 to-purple-600' },
-    { id: 6, name: 'HR', icon: Users, description: 'Human resources management', color: 'from-pink-400 to-pink-600' },
-    { id: 22, name: "Attendence", icon: Clock, description: 'Employee attendance and time off', color: 'from-yellow-400 to-yellow-600' },
-    { id: 7, name: 'Manufacturing', icon: Factory, description: 'Production and manufacturing', color: 'from-indigo-400 to-indigo-600' },
-    { id: 8, name: 'Analytics', icon: BarChart3, description: 'Business intelligence and KPIs', color: 'from-cyan-400 to-cyan-600' },
-    { id: 9, name: 'Calendar', icon: Calendar, description: 'Schedule and event management', color: 'from-red-400 to-red-600' },
-    { id: 10, name: 'Email', icon: Mail, description: 'Email marketing and campaigns', color: 'from-yellow-400 to-yellow-600' },
-    { id: 11, name: 'Employees', icon: UserCheck, description: 'Employee directory and profiles', color: 'from-teal-400 to-teal-600' },
-    { id: 12, name: 'Expenses', icon: CreditCard, description: 'Expense tracking and approval', color: 'from-rose-400 to-rose-600' },
-    { id: 13, name: 'Support', icon: Headphones, description: 'Helpdesk and customer support', color: 'from-amber-400 to-amber-600' },
-    { id: 14, name: 'Discuss', icon: MessageSquare, description: 'Team communication and chat', color: 'from-lime-400 to-lime-600' },
-    { id: 15, name: 'Website', icon: Globe, description: 'Website builder and eCommerce', color: 'from-sky-400 to-sky-600' },
-    { id: 16, name: 'Timesheets', icon: Clock, description: 'Time tracking and project hours', color: 'from-violet-400 to-violet-600' },
-    { id: 17, name: 'Database', icon: Database, description: 'Data management and backup', color: 'from-gray-400 to-gray-600' },
-    { id: 18, name: 'Marketing', icon: Target, description: 'Marketing automation and campaigns', color: 'from-fuchsia-400 to-fuchsia-600' },
-    { id: 19, name: 'Shipping', icon: Truck, description: 'Logistics and delivery management', color: 'from-emerald-400 to-emerald-600' },
-    { id: 20, name: 'Settings', icon: Settings, description: 'System configuration', color: 'from-slate-400 to-slate-600' },
-    { id: 23, name: 'Reports', icon: BarChart3, description: 'Generate and view reports', color: 'from-blue-400 to-blue-600' },
-    { id: 24, name: 'Notifications', icon: Bell, description: 'Manage system notifications', color: 'from-purple-400 to-purple-600' },
-    { id: 25, name: 'Feedback', icon: MessageSquare, description: 'Collect user feedback and suggestions', color: 'from-pink-400 to-pink-600' },
-    { id: 26, name: 'Knowledge Base', icon: FileText, description: 'Access documentation and guides', color: 'from-orange-400 to-orange-600' },
-    { id: 27, name: "Documents", icon: FileText, description: 'Manage company documents and files', color: 'from-teal-400 to-teal-600' },
-    { id: 28, name: "System Logs", icon: Database, description: 'View system logs and activity', color: 'from-gray-400 to-gray-600' },
-    { id: 29, name: "User Management", icon: Users, description: 'Manage user accounts and permissions', color: 'from-indigo-400 to-indigo-600' },
-    { id: 30, name: "API Access", icon: Globe, description: 'Manage API keys and access', color: 'from-cyan-400 to-cyan-600' },
-    { id: 31, name: "Backup", icon: Database, description: 'Create and manage system backups', color: 'from-red-400 to-red-600' },
-    { id: 33, name: "System Health", icon: Heart, description: 'Monitor system health and performance', color: 'from-red-400 to-red-600' },
-  ];
+const apps = [
+  // Core Business Operations
+  { id: 1, name: "Sales", icon: ShoppingCart, description: 'Manage sales pipeline and opportunities', color: 'from-emerald-400 to-emerald-600' },
+  { id: 2, name: "CRM", icon: Building2, description: 'Customer relationship management', color: 'from-blue-400 to-blue-600' },
+  { id: 32, name: "Point of Sales", icon: ShoppingCart, description: 'Retail point of sale system', color: 'from-rose-400 to-rose-600' },
+  { id: 3, name: "Inventory", icon: Package, description: 'Stock and warehouse management', color: 'from-orange-400 to-orange-600' },
+  { id: 21, name: "Procurement", icon: Truck, description: 'Supplier and purchase order management', color: 'from-teal-400 to-teal-600' },
+  { id: 7, name: "Manufacturing", icon: Factory, description: 'Tailoring and production management', color: 'from-indigo-400 to-indigo-600' },
+  { id: 19, name: "Shipping", icon: Truck, description: 'Logistics and delivery management', color: 'from-emerald-400 to-emerald-600' },
+  { id: 4, name: "Accounting", icon: DollarSign, description: 'Financial management and reporting', color: 'from-green-400 to-green-600' },
 
+  // Key Financial Apps (Separated for clarity)
+  { id: 5, name: "Invoicing", icon: FileText, description: 'Billing and invoice management', color: 'from-purple-400 to-purple-600' },
+  { id: 12, name: "Expenses", icon: CreditCard, description: 'Expense tracking and approval', color: 'from-rose-400 to-rose-600' },
+  
+  // Human Resources & Team Management
+  { id: 6, name: "HR", icon: Users, description: 'Human resources management', color: 'from-pink-400 to-pink-600' },
+  { id: 11, name: "Employees", icon: UserCheck, description: 'Employee directory and profiles', color: 'from-teal-400 to-teal-600' },
+  { id: 22, name: "Attendance", icon: Clock, description: 'Employee attendance and time off', color: 'from-yellow-400 to-yellow-600' },
+  { id: 16, name: "Timesheets", icon: Clock, description: 'Time tracking for production orders', color: 'from-violet-400 to-violet-600' },
+
+  // Cross-Functional Tools
+  { id: 13, name: "Support", icon: Headphones, description: 'Helpdesk and customer support', color: 'from-amber-400 to-amber-600' },
+  { id: 14, name: "Discuss", icon: MessageSquare, description: 'Internal team communication and chat', color: 'from-lime-400 to-lime-600' },
+  { id: 15, name: "Website", icon: Globe, description: 'Manage website content and online presence', color: 'from-sky-400 to-sky-600' },
+  { id: 18, name: "Marketing", icon: Target, description: 'Marketing automation and campaigns', color: 'from-fuchsia-400 to-fuchsia-600' },
+  { id: 10, name: "Email", icon: Mail, description: 'Email messaging and templates', color: 'from-yellow-400 to-yellow-600' },
+  
+  // Analytics & Reporting
+  { id: 8, name: "Analytics", icon: BarChart3, description: 'Business intelligence and KPIs', color: 'from-cyan-400 to-cyan-600' },
+  { id: 23, name: "Reports", icon: BarChart3, description: 'Generate and view reports', color: 'from-blue-400 to-blue-600' },
+  
+  // Essential Utilities
+  { id: 9, name: "Calendar", icon: Calendar, description: 'Schedule and event management', color: 'from-red-400 to-red-600' },
+  { id: 27, name: "Documents", icon: FileText, description: 'Centralized document management', color: 'from-teal-400 to-teal-600' },
+  
+  // Administration
+  { id: 20, name: "SystemAdministration", icon: Shield, description: 'Manage all system configurations and access', color: 'from-slate-400 to-slate-600' },
+];
   // Filter apps based on search term
   const filteredApps = searchTerm.trim() === '' 
     ? apps 
