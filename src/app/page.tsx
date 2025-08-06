@@ -8,7 +8,6 @@ import {
   FileText,
   BarChart3,
   Calendar,
-  Settings,
   Building2,
   Truck,
   UserCheck,
@@ -19,10 +18,8 @@ import {
   Globe,
   Mail,
   Clock,
-  Database,
   Target,
-  Bell,
-  Heart,
+  Shield
 } from 'lucide-react';
 
 const ERPAppsPage = () => {
